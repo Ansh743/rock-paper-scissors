@@ -10,41 +10,41 @@ function getComputerChoice() {
     return pickOne(choices);
 }
 
-function playRound(comp, usr) {
-    if (usr.match(comp))
+function playRound(computerSelection, playerSelection) {
+    if (playerSelection.match(computerSelection))
     {
         console.log("It's a tie!");
         return 0;
     }
 
-    if (usr.match('rock') && comp.match('paper'))
+    if (playerSelection.match('rock') && computerSelection.match('paper'))
     {
         console.log("You Lose!");
         return -1;
     }
-    if (comp.match('rock') && usr.match('paper'))
+    if (computerSelection.match('rock') && playerSelection.match('paper'))
     {
         console.log("You Win!");
         return 1;
     }
 
-    if (usr.match('rock') && comp.match('scissor'))
+    if (playerSelection.match('rock') && computerSelection.match('scissor'))
     {
         console.log("You Win!");
         return 1;
     }
-    if (comp.match('rock') && usr.match('scissor'))
+    if (computerSelection.match('rock') && playerSelection.match('scissor'))
     {
         console.log("You Lose!");
         return -1;
     }
 
-    if (usr.match('scissor') && comp.match('paper'))
+    if (playerSelection.match('scissor') && computerSelection.match('paper'))
     {
         console.log("You Win!");
         return 1;
     }
-    if (comp.match('scissor') && usr.match('paper'))
+    if (computerSelection.match('scissor') && playerSelection.match('paper'))
     {
         console.log("You Lose!");
         return -1;
